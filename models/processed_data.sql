@@ -2,7 +2,7 @@ WITH renamed AS (
     SELECT * 
     FROM crosstab(
         'with raw_data AS (
-            SELECT * FROM ' {{ source('public', '_airbyte_raw_test') }} '
+            SELECT * FROM {{ source('public', '_airbyte_raw_test') }} 
         )
         SELECT 
             _airbyte_ab_id,
