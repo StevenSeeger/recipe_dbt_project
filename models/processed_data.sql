@@ -1,6 +1,3 @@
-
-{{ my ~ ', ' ~ string }}
-
 renamed AS (
     SELECT * 
     FROM crosstab(
