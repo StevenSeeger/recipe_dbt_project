@@ -1,10 +1,11 @@
-with raw_data AS (
-    SELECT * FROM {{ source('public', '_airbyte_raw_test') }}
-),
+
 renamed AS (
     SELECT * 
     FROM crosstab(
-        'SELECT 
+        'with raw_data AS (
+            SELECT * FROM {{ source(\'public\', \'_airbyte_raw_test\') }}
+        )
+        SELECT 
             _airbyte_ab_id,
             key,
             value
