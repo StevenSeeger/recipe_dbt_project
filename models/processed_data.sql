@@ -1,4 +1,4 @@
-renamed AS (
+WITH renamed AS (
     SELECT * 
     FROM crosstab(
         {{
